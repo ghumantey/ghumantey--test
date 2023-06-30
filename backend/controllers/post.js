@@ -6,12 +6,10 @@ const postDestination = async (req, res) => {
     const description = req.body.description;
     const username = req.body.username;
 
-    const destination = await Destination.findOne({
-      name: new RegExp("^" + name + "$", "i"),
-    });
+    const destination = await Destination.findOne({name: new RegExp("^" + name + "$", "i")});
 
     if (!destination) {
-      return res.status(404).send(`No destination with name ${name} found.`);
+      return res.status(404).json({msg: `No destination with name ${name} found.`});
     }
 
     const newPost = {
