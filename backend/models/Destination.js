@@ -25,7 +25,6 @@ const destinationSchema = new mongoose.Schema({
   },
   description:{
     type:String,
-    minLength:50
   },
   expenditureDetails: {
     type: String,
@@ -39,7 +38,6 @@ const destinationSchema = new mongoose.Schema({
       },
       photo: {
         type: String,
-        get: (v) => `${root}`,
       },
       description: {
         type: String,
@@ -64,15 +62,11 @@ const destinationSchema = new mongoose.Schema({
   ],
   cuisine: {
     type: Array,
-    required: true,
   },
   historical_facts: {
     type: String,
   },
-  posts: [{
-    type: String,
-  },
-]
+  posts: [{}]
 });
 
 module.exports = mongoose.model("Destination", destinationSchema);
