@@ -36,9 +36,9 @@ app.use("/api/v1/upload", uploadRouter, (req, res) => {
   res.sendStatus(401);
 });
 
-app.get("/", (req,res) => {
-  res.send("hello world  ....");
-})
+app.get("/", (req, res) => {
+  res.send("hellow world!!!");
+});
 
 const port = 8000;
 app.listen(port, () => {

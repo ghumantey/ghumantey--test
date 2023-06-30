@@ -1,5 +1,6 @@
 const Event = require("../models/Event");
 const { BadRequestError, NotFoundError } = require('../errors');
+const { sendPushNotification } = require("../services/pushNotification");
 
 
 const getAllEvents = async (req, res) => {
@@ -20,7 +21,9 @@ const getSingleEvent = async (req, res) => {
 };
 
 const createEvent = async (req, res) => {
+  const {title, description, photo} = req.body;
   const event = await Event.create(req.body);
+  sendPushNotification(title, photo);
   res.status(200).json({ event });
 };
 

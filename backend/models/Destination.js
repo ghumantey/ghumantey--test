@@ -3,25 +3,25 @@ const mongoose = require("mongoose");
 const destinationSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, "Enter name"],
-    maxLength: 50,
+    // required: [true, "Enter name"],
+    // maxLength: 50,
   },
   location: {
     type: String,
-    required: [true, "Enter location"],
-    maxLength: 50,
+    // required: [true, "Enter location"],
+    // maxLength: 50,
   },
   photo: {
     type: String,
   },
   bestVisitingTime: {
     type: String,
-    required: [true, "Enter best visiting time"],
-    maxLength: 50,
+    // required: [true, "Enter best visiting time"],
+    // maxLength: 50,
   },
   timeForCompletion:{
     type:String,
-    required:[true, "Enter the average time to visit"]
+    // required:[true, "Enter the average time to visit"]
   },
   description:{
     type:String,
@@ -29,8 +29,8 @@ const destinationSchema = new mongoose.Schema({
   },
   expenditureDetails: {
     type: String,
-    required: [true, "Enter expenditure"],
-    maxLength: 50,
+    // required: [true, "Enter expenditure"],
+    // maxLength: 50,
   },
   heritageSite: [
     {
@@ -57,7 +57,7 @@ const destinationSchema = new mongoose.Schema({
       description: {
         type: String,
       },
-      tryIt: {
+      photo: {
         type: String,
       },
     },
@@ -69,6 +69,10 @@ const destinationSchema = new mongoose.Schema({
   historical_facts: {
     type: String,
   },
+  posts: [{
+    type: String,
+  },
+]
 });
 
 module.exports = mongoose.model("Destination", destinationSchema);
