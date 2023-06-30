@@ -39,7 +39,7 @@ app.use("/api/v1/upload", uploadRouter, (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("hellow world.....!!!");
+  res.send("hellow world!!!");
 });
 
 const port = 8000;
