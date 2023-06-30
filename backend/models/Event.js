@@ -10,12 +10,12 @@ const eventSchema = new mongoose.Schema({
   photo: {
     type: String,
   },
-//   time: {
-//     type: String,
-//   },
-//   location: {
-//     type: String,
-//   },
+  time: {
+    type: String,
+  },
+  location: {
+    type: String,
+  },
 });
 
 module.exports = mongoose.model("Event", eventSchema);
