@@ -10,7 +10,7 @@ const destinationRouter = require("./routes/destination");
 const eventRouter = require("./routes/event")
 
 const userRouter = require("./routes/user.js");//
-// const searchRoute = require("./routes/query");
+const searchRoute = require("./routes/search");
 
 const app = express();
 
@@ -30,7 +30,7 @@ config.connectDataBase();
 app.use("/api/v1/destination", destinationRouter);
 app.use("/api/v1/event", eventRouter);
 app.use("/user", userRouter);
-// app.use("/api/v1/search", searchRoute);
+app.use("/api/v1/search", searchRoute);
 
 // Used to upload images
 

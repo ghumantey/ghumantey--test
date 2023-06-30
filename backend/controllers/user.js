@@ -111,4 +111,20 @@ const signOut = async (req, res) => {
   res.status(200).json({ status: "success", message: "Sign-out successful" });
 };
 
+// const getUserDetails = async (req, res) => {
+//   try {
+//     const { id: userId } = req.params;
+//     console.log(userId);
+//     const user = await UserModel.findById({ _id: userId });
+//     console.log(user)
+//     if (!user) {
+//       return res.json({ msg: "No user found" });
+//     }
+
+//     res.status(200).json(user);
+//   } catch (err) {
+//     res.json({ message: `${err.message}` });
+//   }
+// };
+
 module.exports = { signUp, signIn, signOut };
