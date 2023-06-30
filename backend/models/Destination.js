@@ -44,23 +44,23 @@ const destinationSchema = new mongoose.Schema({
       },
       rating: {
         type: Number
-      }
-    },
-  ],
-  store: [
-    {
-      item: {
-        type: String,
       },
-      price: {
-        type: String,
-      },
-      description: {
-        type: String,
-      },
-      photo: {
-        type: String,
-      },
+      store: [
+        {
+          item: {
+            type: String,
+          },
+          price: {
+            type: String,
+          },
+          description: {
+            type: String,
+          },
+          photo: {
+            type: String,
+          },
+        },
+      ],
     },
   ],
   cuisine: {
