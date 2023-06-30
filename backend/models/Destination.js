@@ -42,6 +42,9 @@ const destinationSchema = new mongoose.Schema({
       description: {
         type: String,
       },
+      rating: {
+        type: Number
+      }
     },
   ],
   store: [
